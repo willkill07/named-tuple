@@ -3,6 +3,8 @@
 
 #include <algorithm>
 #include <array>
+#include <iterator>
+#include <string_view>
 #include <tuple>
 #include <type_traits>
 #include <utility>
@@ -39,6 +41,10 @@ struct fixed_string : public std::array<char, N - 1>
     requires(M != N)
   {
     return true;
+  }
+
+  explicit operator std::string_view () const noexcept {
+    return std::string_view{this->data(), this->size()};
   }
 };
 
