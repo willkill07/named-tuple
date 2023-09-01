@@ -30,8 +30,8 @@ void use_config(auto&& config) {
 - `named_tuple`: The tuple class - `sizeof(named_tuple) == sizeof(tuple)`
 - `named_val`: descriptor used to indicate the type and name
 - `named_get<"name">`: accessor for retrieving a value stored in the `named_tuple`
-- `named_get<names...>`: accessor for splicing a `named_tuple``. You can even permute!
-- `named_tie<names...`: std::tie() equivalent for `named_tuple``
+- `named_get<names...>`: accessor for splicing a `named_tuple`. You can even permute!
+- `named_tie<names...>`: std::tie() equivalent for `named_tuple`
 
 ### Limitations
 
